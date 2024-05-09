@@ -3,9 +3,9 @@ if [! -d "/var/www/wordpress/wp-admin"]; then
 	sleep 10
 	wp core download --allow-root
 	wp config create --allow-root \
-	--dbname=$SQL_DATABASE \
-	--dbuser=$SQL_USER \
-	--dbpass=$SQL_PASSWORD \
+	--dbname=$DATABASE \
+	--dbuser=$MYSQL_USER \
+	--dbpass=$MYSQL_PASSWORD \
 	--dbhost=mariadb:3306
 
 	wp core install --allow-root \
